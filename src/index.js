@@ -4,13 +4,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CryptoContext from './CryptoContext';
 import 'react-alice-carousel/lib/alice-carousel.css';
+import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-      <CryptoContext>
-            <App />
-      </CryptoContext>
-);
+      <BrowserRouter>
+            <CryptoContext>
+                  <App />
+            </CryptoContext>
+      </BrowserRouter>
+            );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

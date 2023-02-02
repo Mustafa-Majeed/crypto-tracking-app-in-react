@@ -2,37 +2,39 @@
 *{
   margin: 0;
   padding: 0;
-  background-color: rgb(41, 41, 41);
   font-family: 'Montserrat';
+}
+body{
+  background-color: rgb(41, 41, 41);
 }
 /*----------------------- for Header-------------------------- */
 .header{
   height: 10vh;
-  /* background-color: rgb(4, 4, 4); */
 }
 .logo{
   color: gold;
   font-weight: bold;
   font-family: 'Montserrat';
   cursor: pointer;
+  text-decoration: none;
+}
+.logo:hover{
+  color: rgb(230, 196, 2);
 }
 .HdSelect{
   width: 6rem;
+  border: none;
 }
 /* -----------------------Hero-------------------------------- */
 .HeroImg{
-  background-image: url(./images/banner.jpg);
-  height: 60vh;
-  background-size:cover;
+  height: 50%;
+  width: 100%;
   font-size:50px;
-  background-repeat:no-repeat;
   margin-top: -10px; 
-  position: relative;
 }
 .Hero-text{
   position: absolute;
   color: white;
-  background: transparent;
   font-family: 'Montserrat';
   top: 25%;
   left: 50%;  
@@ -40,19 +42,31 @@
   text-align: center;
 }
 .Hero-text h2{
-  background: transparent;
   font-weight: bold;
   font-size: larger;
 }
 .Hero-text p{
-  background: transparent;
   font-weight:100;
   font-size: small;
 }
-.carousel{
-  position: absolute;
-  bottom: 10%;
-  left: 40%;
-  color: aliceblue;
-  
+.cont{
+ background-image: url(./images/banner.jpg);
+ background-size:cover;
+ background-repeat:no-repeat;
+ height: 60vh;
 }
+.carousel{
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+.carouselItems{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+}
+
+

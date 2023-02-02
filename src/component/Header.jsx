@@ -1,5 +1,6 @@
 import React from 'react'
 import { CryptoState } from "../CryptoContext"
+import { Link } from 'react-router-dom';
 function Header() {
 
     const { currency, setCurrency } = CryptoState();
@@ -7,7 +8,7 @@ function Header() {
     return (
         <div className='header'>
             <div className="container d-flex             justify-content-between mt-4">
-                <h5 className='logo'>Crypto-Info</h5>
+            <h5 ><Link to="/" className='logo'> Crypto-Info</Link></h5>
                 <select class="form-select HdSelect bg-warning text-dark" aria-label="Default select example"
                     style={{
                         fontWeight: 500,
