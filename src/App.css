@@ -1,38 +1,58 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(41, 41, 41);
+  font-family: 'Montserrat';
+}
+/*----------------------- for Header-------------------------- */
+.header{
+  height: 10vh;
+  /* background-color: rgb(4, 4, 4); */
+}
+.logo{
+  color: gold;
+  font-weight: bold;
+  font-family: 'Montserrat';
+  cursor: pointer;
+}
+.HdSelect{
+  width: 6rem;
+}
+/* -----------------------Hero-------------------------------- */
+.HeroImg{
+  background-image: url(./images/banner.jpg);
+  height: 60vh;
+  background-size:cover;
+  font-size:50px;
+  background-repeat:no-repeat;
+  margin-top: -10px; 
+  position: relative;
+}
+.Hero-text{
+  position: absolute;
+  color: white;
+  background: transparent;
+  font-family: 'Montserrat';
+  top: 25%;
+  left: 50%;  
+  transform: translate(-50%, -50%);
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Hero-text h2{
+  background: transparent;
+  font-weight: bold;
+  font-size: larger;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Hero-text p{
+  background: transparent;
+  font-weight:100;
+  font-size: small;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel{
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  color: aliceblue;
+  
 }
