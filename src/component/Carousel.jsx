@@ -14,17 +14,20 @@ export function numberWithCommas(x){
 
 function Carousel() {
     const [trending,setTrending]=useState([]);
-    
-
     const { currency ,symbol } = CryptoState();
-    const fetchTrendingCoins = async () =>{
-        const {data} = await axios.get(TrendingCoins(currency))
-        setTrending(data);
-    };
-    console.log(trending);
-    useEffect(()=>{
-        fetchTrendingCoins();
-    },[currency,fetchTrendingCoins]);
+
+    useEffect(() => {
+      axios.get(TrendingCoins(currency))
+        .then(res => {
+          setTrending(res.data);
+        })
+        .catch(err => {
+          console.log(err);
+          
+        });
+    }, [currency]);
+   
+      
 
     const items = trending.map((coin)=>{
       let profit = coin.price_change_percentage_24h >= 0;
