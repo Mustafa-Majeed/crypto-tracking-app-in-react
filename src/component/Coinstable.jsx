@@ -7,19 +7,16 @@ import { numberWithCommas } from './Carousel'
 import { Link } from 'react-router-dom';
 function Coinstable() {
   const [coins, setCoins] = useState([]);
-  const [loading, setLoading] = useState(false);
   const { currency, symbol } = CryptoState();
 
   useEffect(() => {
-    setLoading(true);
     axios.get(CoinList(currency))
       .then(res => {
         setCoins(res.data);
-        setLoading(false);
       })
       .catch(err => {
         console.log(err);
-        setLoading(false);
+        
       });
   }, [currency]);
 

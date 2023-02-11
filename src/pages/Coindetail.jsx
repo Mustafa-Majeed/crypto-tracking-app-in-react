@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { SingleCoin } from '../config/Api';
-import { CryptoState } from '../CryptoContext';
-import { numberWithCommas } from '../component/Carousel'
+
+
 function Coindetail() {
   const [coin, setCoin] = useState({});
-  const { currency, symbol } = CryptoState();
   const { id } = useParams();
   console.log(coin)
 
