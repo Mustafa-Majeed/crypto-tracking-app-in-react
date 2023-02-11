@@ -1,12 +1,12 @@
 import React from 'react'
+import Coinstable from '../component/Coinstable';
 import Header from '../component/Header';
 import Hero from '../component/Hero';
 function HomePage() {
   return (
     <div>
-      <Header/>
       <Hero/>
-      HomePage
+      <Coinstable/>
     </div>
   )
 }

@@ -9,9 +9,10 @@ function Header() {
         <div className='header'>
             <div className="container d-flex             justify-content-between mt-4">
             <h5 ><Link to="/" className='logo'> Crypto-Info</Link></h5>
-                <select class="form-select HdSelect bg-warning text-dark" aria-label="Default select example"
+                <select className="form-select HdSelect bg-warning text-dark" aria-label="Default select example"
                     style={{
                         fontWeight: 500,
+                        cursor: 'pointer'
                     }}
                     value={currency}
                     onChange={(e) => setCurrency(e.target.value)}>
@@ -22,8 +23,9 @@ function Header() {
                         fontWeight: 500,
                     }}>PKR</option>
                 </select>
-                <button type="button" class="btn btn-warning" style={{
+                <button type="button" className="btn btn-warning" style={{
                     fontWeight: 600,
+                    color:"rgb(29, 28, 28)"
                 }}>Login</button>
             </div>
         </div>

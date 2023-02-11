@@ -31,7 +31,7 @@ function Carousel() {
       return(    
         <Link
         className='carouselItems'
-        to={`/coin/${coin.id}`}>
+        to={`/Coindetail/${coin.id}`}>
             <img src={coin?.image} alt={coin.name}
             height="80"
             style={{marginBottom:10}}/>
@@ -46,7 +46,7 @@ function Carousel() {
             </span>
             </span>
             <span style={{fontSize:22, fontWeight:500}}>
-              {symbol}{numberWithCommas(coin?.current_price.toFixed(2))}
+              {symbol}{numberWithCommas(coin?.current_price.toFixed(2))}M
             </span>
         </Link>
       )
